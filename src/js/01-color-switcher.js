@@ -7,7 +7,7 @@ const refs = {
 let intervalId = null;
 
 refs.startBtn.addEventListener("click", changeColor);
-refs.stopBtn.addEventListener("click", stopColor);
+refs.stopBtn.addEventListener("click", stopColor); 
 
 function changeColor(color) {
     stateButtons(true, false);
@@ -24,7 +24,7 @@ function stopColor() {
 
 function stateButtons(startDisabled, stopDisabled) {
     refs.startBtn.disabled = startDisabled;
-    refs.stopBtn.disabled = stopDisabled;
+    refs.stopBtn.disabled = stopDisabled; 
 };
 
 function getRandomHexColor() {

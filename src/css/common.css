@@ -16,11 +16,11 @@ img {
   display: block;
   max-width: 100%;
 }
-.flatpickr-input {
+.flatpickr-input{
   padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #cac4c4;
-  font-size: 24px;
+    border-radius: 10px;
+    border: 1px solid #cac4c4;
+    font-size: 24px;
 }
 [data-start] {
   border-radius: 5px;
@@ -29,7 +29,7 @@ img {
   border: 1px solid #cac4c4;
   background-color: #dcf2dc;
 }
-[data-start]:hover {
+[data-start]:hover{
   border-color: #1d721d;
 }
 [data-stop] {
@@ -39,41 +39,41 @@ img {
   border: 1px solid #cac4c4;
   background-color: #f6d9d9;
 }
-[data-stop]:hover {
+[data-stop]:hover{
   border-color: #9d3131;
 }
-.timer {
-  display: flex;
-  gap: 30px;
-  margin-top: 30px;
+.timer{
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
 }
-.field {
+.field{
   display: flex;
   flex-direction: column;
   border: 1px solid #cac4c4;
   border-radius: 10px;
   padding: 10px;
 }
-.value {
+.value{
   font-size: 45px;
   text-align: center;
 }
-.label {
+.label{
   text-align: center;
 }
-.form {
+.form{
   display: flex;
   gap: 20px;
   justify-content: center;
 }
-.form label {
+.form label{
   color: #7c7a7a;
   font-weight: 500;
 }
-.form label input {
-  padding: 10px;
-  border: 1px solid #d3cccc;
-  border-radius: 5px;
+.form label input{
+padding: 10px;
+border: 1px solid #d3cccc;
+border-radius: 5px;
 }
 .form button {
   background-color: #def2de;
@@ -82,6 +82,6 @@ img {
   font-weight: 800;
   color: #7c7a7a;
 }
-.form button:hover {
+.form button:hover{
   border-color: #1d721d;
 }

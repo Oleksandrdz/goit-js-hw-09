@@ -1,21 +1,32 @@
-const colorStart = document.querySelector('button[data-start]');
-const colorStop = document.querySelector('button[data-stop]');
-const bodyColor = document.querySelector('body');
+const refs = {
+    page: document.querySelector("body"),
+    startBtn: document.querySelector('[data-start]'),
+    stopBtn: document.querySelector('[data-stop]'),
+};
+
 let intervalId = null;
 
-colorStart.addEventListener('click', () => {
+refs.startBtn.addEventListener("click", changeColor);
+refs.stopBtn.addEventListener("click", stopColor);
+
+function changeColor(color) {
+    stateButtons(true, false);
     intervalId = setInterval(() => {
-        bodyColor.style.backgroundColor = getRandomHexColor();
+        color = getRandomHexColor();
+        refs.page.style.backgroundColor = color;
     }, 1000);
-    colorStart.disabled = true;
-});
+};
+
+function stopColor() {
+    clearInterval(intervalId);
+    stateButtons(false, true);
+};
+
+function stateButtons(startDisabled, stopDisabled) {
+    refs.startBtn.disabled = startDisabled;
+    refs.stopBtn.disabled = stopDisabled;
+};
 
 function getRandomHexColor() {
-    return `#${Math.floor(Math.random() * 16777215)
-        .toString(16)
-        .padStart(6, 0)}`;
-}
-colorStop.addEventListener('click', () => {
-    clearInterval(intervalId);
-    colorStart.disabled = false;
-});
+    return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, 0)}`;
+};
